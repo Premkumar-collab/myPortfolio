@@ -4,7 +4,7 @@ import { Navigation } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-
+import Resume from '../../../public/Full Stack Resume.pdf'
 import hero1 from "../../assets/hero1.png";
 import cardboximg1 from "../../assets/cup-img.png";
 import cardboximg2 from "../../assets/admin-icon.png";
@@ -497,7 +497,7 @@ const Index = () => {
                   I bring ideas to life through innovative solutions and
                   attention to detail.
                 </p>
-                <a className="btn skills-btn mt-3">Download CV</a>
+                <a className="btn skills-btn mt-3" href={Resume}>Download CV</a>
               </div>
             </motion.div>
           </div>
