@@ -497,7 +497,7 @@ const Index = () => {
                   I bring ideas to life through innovative solutions and
                   attention to detail.
                 </p>
-                <a className="btn skills-btn mt-3" href={Resume}>Download CV</a>
+                <a className="btn skills-btn mt-3" href={Resume} target="_blank">Download CV</a>
               </div>
             </motion.div>
           </div>
