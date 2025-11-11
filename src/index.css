@@ -892,6 +892,10 @@ body {
 
   .blog-shape2 {
     left: 5% !important;
+    top: 83px;
+  }
+  .contact-card{
+    width: 100%;
   }
 }
 
@@ -928,21 +932,27 @@ body {
     display: none;
   }
   .testimonial {
-    margin-top: 70% !important;
+    margin-top: 78% !important;
   }
-  .test-banner img{
+  .test-banner img {
     margin-top: 32px;
   }
   .test-wrapper {
     margin-top: 8%;
-    left: 12%;
+    left: 1%;
     margin-bottom: 10%;
   }
   .test-card h2 {
     font-size: 2.5rem;
   }
   .swiper-button-next i {
-    left: 90%;
+    left:5%;
+  }
+  .swiper-button-prev i{
+    right:5%;
+  }
+  .halfcircle{
+    top: 9%;
   }
 }
 
@@ -956,6 +966,9 @@ body {
     top: 230px !important;
   }
 
+  .contact-card{
+    width: 100%;
+  }
   .swiper-button-next i {
     left: -400px !important;
   }
@@ -971,33 +984,40 @@ body {
   }
 
   .header {
-    padding-top: 20%;
+    padding-top: 24%;
     height: 100% !important;
+  }
+  .header-content p {
+    margin-top: 108px;
   }
   .hero-card-box {
     display: none !important;
   }
   .hero-shape1 {
     left: 5%;
+    top: 72%;
   }
   .hero-shape2 {
     left: 80%;
-    top: 30%;
+    top: 50%;
   }
   .hero-shape3 {
     left: 20%;
-    top: 35%;
+    top: 49%;
   }
 
   .circleright {
     display: none;
   }
   .halfcircle {
-    top: 6%;
+    top: 5%;
     left: 7%;
   }
   .testimonial {
-    margin-top: 240% !important;
+    margin-top: 340% !important;
+  }
+  .test-wrapper {
+    left: 4%;
   }
   .test-shape1 {
     display: none;
@@ -1014,6 +1034,12 @@ body {
   .blog-shape1,
   .blog-shape2 {
     top: 3% !important;
+  }
+  .contact {
+    padding: 8px;
+  }
+  .curn{
+    top: 99%;
   }
 }
 

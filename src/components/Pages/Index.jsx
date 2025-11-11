@@ -720,102 +720,102 @@ const Index = () => {
       </div>
 
       {/* Blog */}
-      <div className="blog mt-5 py-5 position-relative" id="Blog">
-        <motion.div className="section-title text-center mt-5">
-          <h5 className="text-primary fw-bold">Latest News</h5>
-          <h2 className="fw-bold" style={{ color: "#3f396d" }}>
-            Blog & Articles
-          </h2>
-        </motion.div>
-        <motion.div
-          className="container mt-5"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: false, amount: 0.2 }}
-        >
-          <div className="row g-4">
-            {newsData.slice(0, 3).map((article, index) => {
-              // Fallback images array
-              const fallbackImages = [blog1, blog2, blog3];
-              const fallbackImage = fallbackImages[index % 3];
+<div className="blog mt-5 py-5 position-relative" id="Blog">
+  <motion.div className="section-title text-center mt-5">
+    <h5 className="text-primary fw-bold">Latest News</h5>
+    <h2 className="fw-bold" style={{ color: "#3f396d" }}>
+      Blog & Articles
+    </h2>
+  </motion.div>
+  <motion.div
+    className="container mt-5"
+    initial={{ opacity: 0, x: -100 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.5, delay: 0.3 }}
+    viewport={{ once: false, amount: 0.2 }}
+  >
+    <div className="row g-4">
+      {newsData.slice(0, 3).map((article, index) => {
+        // Fallback images array
+        const fallbackImages = [blog1, blog2, blog3];
+        const fallbackImage = fallbackImages[index % 3];
 
-              return (
-                <div key={index} className="col-lg-4 col-md-6">
-                  <div className="blog-card overflow-hidden shadow-sm d-flex flex-column h-100">
-                    <div style={{ height: "250px", overflow: "hidden" }}>
-                      <img
-                        src={article.image_url || fallbackImage}
-                        alt={article.title || "Blog image"}
-                        className="img-fluid blog-img w-100 h-100"
-                        style={{ objectFit: "cover" }}
-                        onError={(e) => {
-                          e.target.src = fallbackImage;
-                        }}
-                      />
-                    </div>
-                    <div className="blog-content mt-1 p-3 d-flex flex-column flex-grow-1">
-                      <div className="d-flex justify-content-between w-100 mb-2">
-                        <a
-                          href="#"
-                          className="author text-truncate"
-                          style={{ maxWidth: "60%" }}
-                        >
-                          By {article.source_id || "Author"}
-                        </a>
-                        <span className="date text-nowrap">
-                          {article.pubDate
-                            ? article.pubDate.slice(0, 10)
-                            : "N/A"}
-                        </span>
-                      </div>
-                      <h5
-                        className="card-title mt-2"
-                        style={{
-                          minHeight: "3rem",
-                          display: "-webkit-box",
-                          WebkitLineClamp: 2,
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                        }}
-                      >
-                        {article.title || "No title available"}
-                      </h5>
-                      <p
-                        className="card-text my-2 flex-grow-1"
-                        style={{
-                          display: "-webkit-box",
-                          WebkitLineClamp: 3,
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                        }}
-                      >
-                        {article.description || "No description available"}
-                      </p>
-                      <a
-                        href={article.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="read-more mt-auto"
-                      >
-                        Read More
-                      </a>
-                    </div>
-                  </div>
+        return (
+          <div key={index} className={`col-lg-4 col-md-6 ${index === 2 ? 'd-none d-md-block' : ''}`}>
+            <div className="blog-card overflow-hidden shadow-sm d-flex flex-column h-100">
+              <div style={{ height: "250px", overflow: "hidden" }}>
+                <img
+                  src={article.image_url || fallbackImage}
+                  alt={article.title || "Blog image"}
+                  className="img-fluid blog-img w-100 h-100"
+                  style={{ objectFit: "cover" }}
+                  onError={(e) => {
+                    e.target.src = fallbackImage;
+                  }}
+                />
+              </div>
+              <div className="blog-content mt-1 p-3 d-flex flex-column flex-grow-1">
+                <div className="d-flex justify-content-between w-100 mb-2">
+                  <a
+                    href="#"
+                    className="author text-truncate"
+                    style={{ maxWidth: "60%" }}
+                  >
+                    By {article.source_id || "Author"}
+                  </a>
+                  <span className="date text-nowrap">
+                    {article.pubDate
+                      ? article.pubDate.slice(0, 10)
+                      : "N/A"}
+                  </span>
                 </div>
-              );
-            })}
+                <h5
+                  className="card-title mt-2"
+                  style={{
+                    minHeight: "3rem",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                  }}
+                >
+                  {article.title || "No title available"}
+                </h5>
+                <p
+                  className="card-text my-2 flex-grow-1"
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                  }}
+                >
+                  {article.description || "No description available"}
+                </p>
+                <a
+                  href={article.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="read-more mt-auto"
+                >
+                  Read More
+                </a>
+              </div>
+            </div>
           </div>
-        </motion.div>
+        );
+      })}
+    </div>
+  </motion.div>
 
-        <img src={shape1} alt="" className="blog-shape1 position-absolute" />
-        <img src={shape2} alt="" className="blog-shape2 position-absolute" />
-        <img
-          src={halfcircleright}
-          alt=""
-          className="blog-shape3 position-absolute"
-        />
-      </div>
+  <img src={shape1} alt="" className="blog-shape1 position-absolute" />
+  <img src={shape2} alt="" className="blog-shape2 position-absolute" />
+  <img
+    src={halfcircleright}
+    alt=""
+    className="blog-shape3 position-absolute"
+  />
+</div>
 
       {/* contact */}
       <div className="contact mt-5 pb-5 position-relative" id="Contact">
