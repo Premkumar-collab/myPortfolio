@@ -894,7 +894,7 @@ body {
     left: 5% !important;
     top: 83px;
   }
-  .contact-card{
+  .contact-card {
     width: 100%;
   }
 }
@@ -946,19 +946,19 @@ body {
     font-size: 2.5rem;
   }
   .swiper-button-next i {
-    left:5%;
+    left: 5%;
   }
-  .swiper-button-prev i{
-    right:5%;
+  .swiper-button-prev i {
+    right: 5%;
   }
-  .halfcircle{
+  .halfcircle {
     top: 9%;
   }
 }
 
 @media (max-width: 767px) {
   .testimonial {
-    margin-top: 180% !important;
+    margin-top: 280% !important;
   }
 
   .swiper-button-next i,
@@ -966,7 +966,7 @@ body {
     top: 230px !important;
   }
 
-  .contact-card{
+  .contact-card {
     width: 100%;
   }
   .swiper-button-next i {
@@ -1005,7 +1005,9 @@ body {
     left: 20%;
     top: 49%;
   }
-
+  .skills-title h2 {
+    font-size: 3rem !important;
+  }
   .circleright {
     display: none;
   }
@@ -1014,7 +1016,7 @@ body {
     left: 7%;
   }
   .testimonial {
-    margin-top: 340% !important;
+    margin-top: 384% !important;
   }
   .test-wrapper {
     left: 4%;
@@ -1038,7 +1040,7 @@ body {
   .contact {
     padding: 8px;
   }
-  .curn{
+  .curn {
     top: 99%;
   }
 }
